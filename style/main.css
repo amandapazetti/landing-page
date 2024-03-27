@@ -1,0 +1,971 @@
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+nav.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+  margin-top: 3rem;
+}
+nav.top-bar div.brand {
+  font-family: "Playfair Display", serif;
+  color: #10375C;
+  font-weight: 700;
+  font-size: 24px;
+}
+nav.top-bar menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #222831;
+  display: flex;
+  gap: 40px;
+}
+nav.top-bar menu li {
+  cursor: pointer;
+}
+nav.top-bar div.auth button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+nav.top-bar div.auth button.login {
+  color: #FF5722;
+}
+nav.top-bar div.auth button.signup {
+  background-color: #FF5722;
+  color: white;
+  box-shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);
+}
+
+div.anchor {
+  font-family: "Lato", serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #222831;
+  display: flex;
+  align-items: center;
+}
+div.anchor div {
+  margin-left: 20px;
+  width: 73px;
+  height: 2px;
+  background-color: #222831;
+}
+
+main {
+  margin-top: 3rem;
+}
+main section:not(.signup) {
+  padding-bottom: 7rem;
+}
+
+section.intro {
+  padding-left: 10vw;
+}
+section.intro div.content {
+  display: flex;
+  gap: 2rem;
+  padding-right: 10vw;
+}
+section.intro div.content h1 {
+  margin: 0;
+  font-family: "Lora", serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #10375C;
+}
+section.intro div.content h1 span {
+  color: #FF5722;
+}
+section.intro div.content p {
+  margin: 0;
+  font-family: "Lato", serif;
+  color: #6A6A6A;
+  font-size: 20px;
+  line-height: 30px;
+}
+section.intro div.form-wrapper {
+  position: relative;
+  height: 35rem;
+}
+section.intro div.form-wrapper div.background-wrapper {
+  position: relative;
+  height: 100%;
+  margin-left: 20rem;
+  width: calc(90vw - 20rem);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+section.intro div.form-wrapper div.background-wrapper img.background {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.intro div.form-wrapper div.background-wrapper div.img-selector {
+  position: absolute;
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+}
+section.intro div.form-wrapper div.background-wrapper div.img-selector img {
+  cursor: pointer;
+}
+section.intro div.form-wrapper div.form {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #10375C;
+  padding: 2rem 3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+section.intro div.form-wrapper div.form h2 {
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Lora", serif;
+  color: white;
+}
+section.intro div.form-wrapper div.form div.field {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 0.5rem 1rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0D2C4A;
+}
+section.intro div.form-wrapper div.form div.field div.select {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+}
+section.intro div.form-wrapper div.form div.field div.select span.label {
+  opacity: 0.5;
+}
+section.intro div.form-wrapper div.form button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  background-color: #FF5722;
+  color: white;
+  font-family: "Lato", serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.7rem 0;
+}
+
+section.our-spaces {
+  padding: 0 10vw;
+}
+section.our-spaces div.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.our-spaces div.head h2 {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Lora", serif;
+  color: #10375C;
+}
+section.our-spaces div.head p {
+  color: #9A9A9A;
+  font-family: "Lato", serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+section.our-spaces div.head div.arrows {
+  display: flex;
+  gap: 1rem;
+}
+section.our-spaces div.head div.arrows img {
+  cursor: pointer;
+}
+section.our-spaces div.head div.arrows img:nth-of-type(1) {
+  width: 48px;
+  filter: invert(71%) sepia(0%) saturate(606%) hue-rotate(192deg) brightness(88%) contrast(85%);
+}
+section.our-spaces div.head div.arrows img:nth-of-type(2) {
+  width: 84px;
+  filter: invert(38%) sepia(94%) saturate(1717%) hue-rotate(346deg) brightness(101%) contrast(101%);
+}
+section.our-spaces div.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+section.our-spaces div.cards div.card-wrapper div.card {
+  position: relative;
+  width: 22rem;
+  height: 26rem;
+}
+section.our-spaces div.cards div.card-wrapper div.card img.card-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.our-spaces div.cards div.card-wrapper div.card div.chevron-wrapper {
+  position: absolute;
+  background-color: #FF5722;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+section.our-spaces div.cards div.card-wrapper p {
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222831;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+section.our-spaces div.cards div.card-content {
+  box-shadow: 0px 10px 5px rgba(16, 55, 92, 0.1);
+  background-color: #10375C;
+  position: relative;
+  width: 22rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.our-spaces div.cards div.card-content img.zebra-square {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+section.our-spaces div.cards div.card-content h3 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+}
+section.our-spaces div.cards div.card-content p {
+  margin: 0;
+  font-family: "Lato", serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  text-align: center;
+  width: 15rem;
+  cursor: text;
+}
+section.our-spaces div.cards div.card-content div.chevron-wrapper {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: #FF5722;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+section.our-spaces div.cards div.card-content div.chevron-wrapper p {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Lato", serif;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+section.our-spaces div.status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+section.our-spaces div.status img.progress-horizontal {
+  height: 4px;
+}
+section.our-spaces div.status p {
+  margin: 0;
+}
+section.our-spaces div.status p span.current {
+  color: #0D2C4A;
+  font-family: "Lato", serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+section.our-spaces div.status p span.bar {
+  color: #10375C;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+section.our-spaces div.status p span.total {
+  color: #9A9A9A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+section.why-frispes {
+  display: flex;
+  padding: 0 10vw;
+}
+section.why-frispes div.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  width: 50%;
+}
+section.why-frispes div.icons div.icon-wrapper {
+  display: flex;
+  align-items: start;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section.why-frispes div.icons div.icon-wrapper div.text {
+  margin-left: 1rem;
+}
+section.why-frispes div.icons div.icon-wrapper div.text h3 {
+  margin: 0;
+  font-family: "Lora", serif;
+  color: #10375C;
+  font-weight: 400;
+  font-size: 32px;
+}
+section.why-frispes div.icons div.icon-wrapper div.text p {
+  margin: 0;
+  font-family: "Lato", serif;
+  color: #9A9A9A;
+  font-weight: 400;
+  font-size: 16px;
+}
+section.why-frispes div.icons img.icon {
+  -o-object-fit: none;
+     object-fit: none;
+  margin-top: 0.2rem;
+}
+section.why-frispes div.content {
+  width: 50%;
+  background-color: #10375C;
+  padding: 3rem;
+}
+section.why-frispes div.content h2 {
+  font-family: "Lora", serif;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+section.why-frispes div.content p {
+  font-family: "Lato", serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+}
+section.why-frispes div.content div.anchor {
+  color: white;
+}
+section.why-frispes div.content div.anchor div {
+  background-color: white;
+}
+
+section.facilities {
+  padding: 0 10vw;
+}
+section.facilities h2 {
+  margin: 0;
+  font-family: "Lora", serif;
+  color: #10375C;
+  font-size: 40px;
+  font-weight: 700;
+  width: 50%;
+}
+section.facilities div.content {
+  display: flex;
+  margin-top: 2rem;
+}
+section.facilities div.content div.status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+section.facilities div.content div.status img.progress-vertical {
+  width: 4px;
+}
+section.facilities div.content div.status p {
+  margin: 0;
+  transform: rotate(-90deg);
+}
+section.facilities div.content div.status p span.current {
+  color: #0D2C4A;
+  font-family: "Lato", serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+section.facilities div.content div.status p span.bar {
+  color: #10375C;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+section.facilities div.content div.status p span.total {
+  color: #9A9A9A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+section.facilities div.content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222831;
+  margin: 0 4rem 0 2rem;
+}
+section.facilities div.content ul li {
+  padding: 1rem 2rem;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+section.facilities div.content ul li.selected {
+  background-color: #FF5722;
+  box-shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);
+  color: white;
+}
+section.facilities div.content img.picture {
+  display: flex;
+  flex-grow: 1;
+}
+
+section.gallery {
+  display: flex;
+  align-items: flex-end;
+  height: 40rem;
+}
+section.gallery img.square-img {
+  aspect-ratio: 1/1;
+  margin-right: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 60%;
+}
+section.gallery img.full-height-img {
+  height: 100%;
+}
+section.gallery div.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+section.gallery div.content div.head {
+  margin-left: 4rem;
+  padding-right: 10vw;
+}
+section.gallery div.content div.head h2 {
+  margin: 0;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #10375C;
+}
+section.gallery div.content div.head div.arrows {
+  display: flex;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+section.gallery div.content div.head div.arrows img {
+  cursor: pointer;
+}
+section.gallery div.content div.head div.arrows img:nth-of-type(1) {
+  width: 48px;
+  filter: invert(71%) sepia(0%) saturate(606%) hue-rotate(192deg) brightness(88%) contrast(85%);
+}
+section.gallery div.content div.head div.arrows img:nth-of-type(2) {
+  width: 84px;
+  filter: invert(38%) sepia(94%) saturate(1717%) hue-rotate(346deg) brightness(101%) contrast(101%);
+}
+section.gallery div.content div.below-imgs {
+  display: flex;
+  margin-top: 4rem;
+  height: 50%;
+  margin-left: 4rem;
+  gap: 4rem;
+  aspect-ratio: 1/1;
+}
+
+section.use-frispes h2 {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #0D2C4A;
+  text-align: center;
+}
+section.use-frispes p {
+  font-family: "Lato", serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #9A9A9A;
+  text-align: center;
+}
+section.use-frispes div.logos {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+section.use-frispes div.logos img {
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+section.reviews div.anchor {
+  padding-left: 10vw;
+}
+section.reviews div.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10vw;
+}
+section.reviews div.head h2 {
+  margin: 0;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #10375C;
+}
+section.reviews div.head div.arrows {
+  display: flex;
+  gap: 1rem;
+}
+section.reviews div.head div.arrows img {
+  cursor: pointer;
+}
+section.reviews div.head div.arrows img:nth-of-type(1) {
+  width: 48px;
+  filter: invert(71%) sepia(0%) saturate(606%) hue-rotate(192deg) brightness(88%) contrast(85%);
+}
+section.reviews div.head div.arrows img:nth-of-type(2) {
+  width: 84px;
+  filter: invert(38%) sepia(94%) saturate(1717%) hue-rotate(346deg) brightness(101%) contrast(101%);
+}
+section.reviews div.cards {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10vw;
+  margin-top: 3rem;
+}
+section.reviews div.cards div.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-color: #10375C;
+  width: 25rem;
+  padding: 2rem;
+  height: 20rem;
+}
+section.reviews div.cards div.card p {
+  font-size: 16px;
+  font-family: "Lato", serif;
+  line-height: 26px;
+}
+section.reviews div.cards div.card div.personal-info {
+  display: flex;
+  gap: 1rem;
+}
+section.reviews div.cards div.card div.personal-info img.avatar {
+  -o-object-fit: none;
+     object-fit: none;
+}
+section.reviews div.cards div.card div.personal-info div.user-details {
+  display: flex;
+  flex-direction: column;
+}
+section.reviews div.cards div.card div.personal-info div.user-details p.name {
+  margin: 0;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+section.reviews div.cards div.card div.personal-info div.user-details p.job {
+  margin: 0;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+section.reviews div.status {
+  display: flex;
+  justify-content: center;
+}
+section.reviews div.status img.progress-horizontal {
+  padding: 4rem 0;
+  height: 4px;
+}
+
+section.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10vw;
+}
+section.faq h2 {
+  font-family: "Lora", serif;
+  font-size: 40px;
+  color: #10375C;
+  width: 35rem;
+}
+section.faq div.cards {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+section.faq div.cards div.card {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 4rem 1rem;
+  width: 20rem;
+  position: relative;
+}
+section.faq div.cards div.card h4 {
+  width: 80%;
+  margin: 0;
+  font-family: "Lora", serif;
+  font-size: 26px;
+  color: black;
+  font-weight: 100;
+  text-align: center;
+}
+section.faq div.cards div.card div.chevron-orientation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% - 1.5rem);
+  display: flex;
+  justify-content: center;
+}
+section.faq div.cards div.card div.chevron-orientation div.chevron-wrapper {
+  cursor: pointer;
+  background-color: #FF5722;
+  padding: 1rem 1.5rem;
+}
+section.faq div.cards div.card div.chevron-orientation div.chevron-wrapper img {
+  height: 0.6rem;
+}
+section.faq div.cards div.card.invert-color {
+  background-color: #FF5722;
+}
+section.faq div.cards div.card.invert-color h4 {
+  color: white;
+}
+section.faq div.cards div.card.invert-color div.chevron-orientation div.chevron-wrapper {
+  background-color: white;
+  box-shadow: -8px 4px 16px rgba(255, 87, 34, 0.2);
+}
+section.faq div.cards div.card.invert-color div.chevron-orientation div.chevron-wrapper img {
+  filter: invert(38%) sepia(94%) saturate(1717%) hue-rotate(346deg) brightness(101%) contrast(101%);
+}
+section.faq div.questions {
+  display: flex;
+  align-items: center;
+  color: #FF5722;
+  font-size: 16px;
+  font-family: "Lato", serif;
+  line-height: 26px;
+  font-weight: 400;
+  cursor: pointer;
+}
+section.faq div.questions img {
+  filter: invert(38%) sepia(94%) saturate(1717%) hue-rotate(346deg) brightness(101%) contrast(101%);
+}
+
+section.news {
+  background-color: #F8F8F8;
+  padding: 2rem 10vw 7rem 10vw;
+}
+section.news div.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.news div.head h2 {
+  color: #10375C;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+section.news div.head div.more {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #FF5722;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+section.news div.head div.more img {
+  filter: invert(38%) sepia(94%) saturate(1717%) hue-rotate(346deg) brightness(101%) contrast(101%);
+}
+section.news div.cards-row-1 {
+  display: grid;
+  grid-template-columns: 2fr calc(33% - 1rem);
+  gap: 2rem;
+}
+section.news div.cards-row-2 {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+section.news div.dual-card {
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+section.news div.dual-card div.dual-card-content {
+  padding: 0rem 2rem;
+}
+section.news div.dual-card div.dual-card-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Lora", serif;
+  color: #222831;
+}
+section.news div.dual-card div.dual-card-content p.description {
+  color: #9A9A9A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Lato", serif;
+}
+section.news div.dual-card div.dual-card-content div.personal-info {
+  display: flex;
+  gap: 1rem;
+}
+section.news div.dual-card div.dual-card-content div.personal-info img.avatar {
+  -o-object-fit: none;
+     object-fit: none;
+}
+section.news div.dual-card div.dual-card-content div.personal-info div.user-details {
+  display: flex;
+  flex-direction: column;
+}
+section.news div.dual-card div.dual-card-content div.personal-info div.user-details p.name {
+  margin: 0;
+  font-family: "Lato", serif;
+  color: #10375C;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+section.news div.dual-card div.dual-card-content div.personal-info div.user-details p.job {
+  margin: 0;
+  font-family: "Lato", serif;
+  color: #9A9A9A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+section.news div.card {
+  background-color: white;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+section.news div.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+section.news div.card div.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+section.news div.card div.card-content h6 {
+  margin: 0;
+  font-family: "Lora", serif;
+  color: #222831;
+  font-size: 22px;
+  font-weight: 400;
+}
+section.news div.card div.card-content p {
+  margin: 0;
+  font-family: "Lato", serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #9A9A9A;
+}
+
+section.signup {
+  background-color: #10375C;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+section.signup div.content-orientation {
+  display: flex;
+  align-items: center;
+}
+section.signup div.content-orientation div.content {
+  color: white;
+  width: 40%;
+}
+section.signup div.content-orientation div.content div.anchor {
+  color: white;
+}
+section.signup div.content-orientation div.content div.anchor div {
+  background-color: white;
+}
+section.signup div.content-orientation div.content h2 {
+  margin: 0;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+section.signup div.content-orientation div.content p {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #DFDFDF;
+}
+section.signup div.content-orientation div.content button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-transform: uppercase;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  background-color: #FF5722;
+  padding: 0.5rem 6rem;
+}
+section.signup div.image {
+  display: flex;
+  position: relative;
+  margin-right: 10rem;
+}
+
+footer {
+  display: flex;
+  padding: 4rem 10vw;
+  background-color: #0D2C4A;
+  justify-content: space-between;
+}
+footer div.frispes {
+  color: white;
+  width: 20rem;
+}
+footer div.frispes h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: 700;
+  font-family: "Lora", serif;
+}
+footer div.frispes p {
+  color: #F8F8F8;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Lato", serif;
+}
+footer div.frispes div.icons {
+  display: flex;
+  gap: 1rem;
+}
+footer div.frispes div.icons img {
+  cursor: pointer;
+}
+footer div.links-wrapper {
+  display: flex;
+  gap: 4rem;
+}
+footer div.links-wrapper div.links {
+  color: white;
+}
+footer div.links-wrapper div.links p {
+  opacity: 0.5;
+  font-family: "Lato", serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+}
+footer div.links-wrapper div.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer div.links-wrapper div.links ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Lato", serif;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}/*# sourceMappingURL=main.css.map */
